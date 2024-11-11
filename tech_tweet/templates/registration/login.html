@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Tect Tweets
+{% endblock %}
+
+{% block content %}
+<h2>Login form</h2>
+<form class="text-white" method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button class="btn btn-primary">Login</button>
+</form>
+<p class="text-white"> Don't have an account? <a class="text-white" href="{% url 'register'%}">Register here</a></p>
+{% endblock %}
+
